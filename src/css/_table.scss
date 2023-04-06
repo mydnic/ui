@@ -1,0 +1,141 @@
+
+table.schedule-table {
+    position: relative;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    thead {
+        @apply bg-gray-200;
+        tr {
+            th {
+                text-align: center;
+                width: auto;
+                text-transform: uppercase;
+                @apply px-3 py-2 text-sm font-semibold text-gray-700 border border-gray-300;
+                &:first-child {
+                    width: 120px;
+                }
+            }
+        }
+    }
+    tbody {
+        text-align: left;
+        @apply p-1;
+        tr {
+            td {
+                width: auto;
+                position: relative;
+                @apply px-4 py-3 border border-gray-300 bg-white text-gray-700;
+            }
+            &:hover {
+                td {
+                    @apply bg-gray-100;
+                }
+            }
+        }
+    }
+}
+
+table {
+    &.table-default {
+        @apply min-w-full divide-y divide-gray-300;
+        &.with-pagination {
+            @apply rounded-none shadow-none;
+            tbody {
+                @apply rounded-none;
+                tr {
+                    &:last-child {
+                        td:last-child {
+                            @apply rounded-none;
+                        }
+                        td:first-child {
+                            @apply rounded-none;
+                        }
+                    }
+                    &:last-child {
+                        td {
+                            @apply border-b;
+                        }
+                    }
+                }
+            }
+        }
+        &.condensed {
+            thead tr th {
+                &:first-child {
+                    @apply py-3.5 pl-4 pr-3;
+                }
+                @apply px-2 py-3.5;
+            }
+            tbody tr {
+                td {
+                    &:first-child {
+                        @apply py-2 pl-4 pr-3;
+                    }
+                    &:last-child {
+                        @apply py-2 pl-3 pr-4;
+                    }
+                    @apply px-2 py-2;
+                }
+            }
+        }
+        thead {
+            @apply bg-gray-50;
+            tr {
+                th {
+                    @apply px-3 py-3.5 text-sm font-semibold text-gray-900 sm:table-cell;
+                    &:first-child {
+                        @apply rounded-tl-lg py-3.5 pl-4 pr-3;
+                    }
+                    &:last-child {
+                        @apply rounded-tr-lg;
+                    }
+                    &.right {
+                        text-align: right;
+                        div {
+                            @apply justify-end;
+                        }
+                    }
+                }
+            }
+        }
+        tbody {
+            @apply divide-y divide-gray-200 bg-white;
+            tr {
+                td {
+                    @apply whitespace-nowrap px-3 py-4 text-sm text-gray-500;
+                    &:first-child {
+                        @apply whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900;
+                    }
+                    &:last-child {
+                        @apply whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium;
+                    }
+                    &.right {
+                        text-align: right;
+                    }
+                }
+                &:hover {
+                    td {
+                        @apply bg-gray-100;
+                    }
+                }
+                &:last-child {
+                    td {
+                        &:first-child {
+                            @apply rounded-bl-lg;
+                        }
+                        &:last-child {
+                            @apply rounded-br-lg;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.bordered {
+        tbody, tr, td, th {
+            @apply border border-gray-400;
+        }
+    }
+}

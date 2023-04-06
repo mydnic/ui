@@ -1,0 +1,29 @@
+.label {
+    @apply block text-sm font-medium tracking-wide text-gray-800;
+}
+.input {
+    @apply transition text-black duration-150 ease-in-out block w-full shadow-sm focus:ring-primary-500 focus:border-primary-500 sm:text-sm border-gray-300 rounded-md;
+    &.text-transparent{
+        color: transparent;
+    }
+    &:disabled {
+        @apply cursor-not-allowed bg-gray-50 text-gray-500 ring-gray-200;
+    }
+    &.error {
+        @apply border border-red-400;
+    }
+}
+
+.input-layout .icon {
+    @apply h-5 w-5 text-gray-400;
+}
+
+.input-error {
+    @apply mt-1 text-xs text-red-500;
+}
+
+.dark-nav {
+    .input {
+        @apply block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-gray-700 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm;
+    }
+}

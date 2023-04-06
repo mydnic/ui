@@ -1,0 +1,26 @@
+.dropdown-menu {
+    @apply absolute right-0 z-10 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg py-1;
+    .dropdown-menu-item {
+        @apply px-4 py-2 text-sm leading-5 flex text-gray-700 w-full text-left items-center cursor-pointer;
+        .icon {
+            @apply h-4 w-4 mr-2 text-gray-500;
+        }
+        &:focus {
+            @apply outline-none bg-gray-100 text-gray-900;
+        }
+        &:hover {
+            @apply bg-gray-100 text-gray-900;
+        }
+        &.red, &.danger {
+            &:hover {
+                @apply bg-red-500 text-white;
+                .icon {
+                    @apply text-white;
+                }
+            }
+        }
+    }
+    .dropdown-menu-divider {
+        @apply block w-full h-px bg-gray-100 my-1;
+    }
+}

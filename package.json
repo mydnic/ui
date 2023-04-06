@@ -1,0 +1,64 @@
+{
+    "name": "mydnic-ui",
+    "license": "MIT",
+    "version": "v1.0.0",
+    "description": "A set of vuejs components - using tailwind ui",
+    "author": "mydnic",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/mydnic-ui.umd.js",
+    "module": "./dist/mydnic-ui.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/mydnic-ui.es.js",
+            "require": "./dist/mydnic-ui.umd.js"
+        },
+        "./mydnic-ui.css": {
+            "import": "./src/css/ui.css",
+            "require": "./src/css/ui.css"
+        },
+        "./tailwind.config.js": {
+            "require": "./tailwind.config.cjs"
+        }
+    },
+    "types": "./dist/main.d.ts",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "serve": "vite preview"
+    },
+    "dependencies": {
+        "@heroicons/vue": "^2.0.17",
+        "@tailwindcss/aspect-ratio": "^0.4.2",
+        "@tailwindcss/forms": "^0.5.3",
+        "@tailwindcss/typography": "^0.5.9",
+        "@vueform/slider": "^2.1.7",
+        "@vueup/vue-quill": "^1.1.1",
+        "apexcharts": "^3.37.3",
+        "browser-update": "^3.3.44",
+        "dayjs": "^1.11.6",
+        "mitt": "^3.0.0",
+        "tailwindcss": "^3.3.1",
+        "unplugin-vue-components": "^0.24.1",
+        "vue-currency-input": "^3.0.4",
+        "vue3-apexcharts": "^1.4.1",
+        "weekstart": "^2.0.0"
+    },
+    "devDependencies": {
+        "@nuxtjs/eslint-config": "^12.0.0",
+        "@vitejs/plugin-vue": "^4.1.0",
+        "autoprefixer": "^10.4.14",
+        "eslint": "^8.37.0",
+        "eslint-plugin-nuxt": "^4.0.0",
+        "postcss": "^8.4.21",
+        "postcss-import": "^15.1.0",
+        "vite": "^4.2.1",
+        "vue": "^3.2.47"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mydnic/ui.git"
+    }
+}

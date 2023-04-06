@@ -1,0 +1,41 @@
+.desktop-navigation-default {
+    .navigation-link {
+        @apply inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700;
+
+        &.active {
+            @apply text-gray-900 border-b-2 border-primary-500;
+        }
+    }
+}
+
+.mobile-navigation-default {
+    .navigation-link {
+        @apply border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-medium;
+
+        &.active {
+            @apply bg-primary-50 border-primary-500 text-primary-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium;
+        }
+    }
+}
+
+.desktop-navigation-dark {
+    @apply items-center;
+    .navigation-link {
+        @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
+
+        &.active {
+            @apply bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium;
+        }
+    }
+}
+
+.mobile-navigation-dark {
+    @apply sm:px-3 px-2;
+    .navigation-link {
+        @apply text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium;
+
+        &.active {
+            @apply bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium;
+        }
+    }
+}
