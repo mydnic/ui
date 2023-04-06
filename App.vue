@@ -853,7 +853,7 @@
 <script>
 import { defineComponent } from 'vue'
 import dayjs from 'dayjs'
-import dateRange from './src/js/mixins/dateRange'
+import dateRange from './src/js/mixins/dateRangeMixin'
 
 export default defineComponent({
     mixins: [dateRange],

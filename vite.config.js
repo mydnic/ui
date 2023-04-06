@@ -12,7 +12,7 @@ export default defineConfig({
         lib: {
             // Could also be a dictionary or array of multiple entry points
             entry: 'src/js/index.js',
-            name: 'mydnicUi',
+            name: 'mydnic-ui',
             formats: ['es', 'cjs', 'umd'],
             fileName: format => `mydnic-ui.${format}.js`
         },
